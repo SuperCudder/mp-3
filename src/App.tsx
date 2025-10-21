@@ -1,6 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout';
-import Home from './pages/Home.tsx';
+import Home from './pages/Home';
 import Education from './pages/Education';
 import Certifications from './pages/Certifications';
 import Achievements from './pages/Achievements';
