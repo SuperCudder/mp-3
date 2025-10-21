@@ -1,23 +1,24 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Nav from './Nav';
 import Footer from './Footer';
-import { TitleContext } from '../contexts/TitleContext';
+import Main from './Main';
 
+/* main layout component */
 const Layout = () => {
-  const { title, subtitle } = useContext(TitleContext);
-
-  return (
-    <div className="page-container">
-      <Header title={title} subtitle={subtitle} />
-      <div className="idxMain">
-        <Nav />
-        <Outlet />
-      </div>
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="page-container">
+            <Header />
+            <div className="idxMain">
+                <Nav />
+                <Main>
+                    <Outlet /> {/* nested routes will be rendered here */}
+                </Main>
+            </div>
+            <Footer />
+        </div>
+    );
 };
 
 export default Layout;

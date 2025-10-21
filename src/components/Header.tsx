@@ -1,15 +1,21 @@
 import React, { useContext } from 'react';
 import { TitleContext } from '../contexts/TitleContext';
+import { HeaderWrapper } from './styled/StyledHeader';
 
+/* header component */
 const Header = () => {
-  const { title, subtitle } = useContext(TitleContext);
+    const context = useContext(TitleContext);
+    if (!context) {
+        throw new Error('Header must be used within a TitleProvider');
+    }
+    const { title, subtitle } = context;
 
-  return (
-    <header>
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
-    </header>
-  );
+    return (
+        <HeaderWrapper>
+            <h1>{title}</h1> {/* main title */}
+            <p>{subtitle}</p> {/* subtitle */}
+        </HeaderWrapper>
+    );
 };
 
 export default Header;

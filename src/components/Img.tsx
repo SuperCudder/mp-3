@@ -1,10 +1,17 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import { ImgWrapper } from './styled/StyledImg';
 
-const Image = styled.img`
-    display: block;
-    width: 100%;
-    flex: auto;
-`
+interface ImgProps {
+    src: string;
+    alt: string;
+    className?: string;
+    width?: string | number;
+    height?: string | number;
+}
 
-export default Image;
+/* image component */
+const Img: React.FC<ImgProps> = ({ src, alt, className, width, height }) => {
+    return <ImgWrapper src={src} alt={alt} className={className} width={width} height={height} />;
+};
+
+export default Img;
