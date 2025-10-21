@@ -13,6 +13,7 @@ const Nav = () => {
         <li><Link to="/achievements">Achievements</Link></li>
         <li><Link to="/references">References</Link></li>
         <li><Link to="/certifications">Certifications</Link></li>
+        <li><Link to="/calculator">Calculator</Link></li>
         <li><a href="https://github.com/SuperCudder" target="_blank" rel="noopener noreferrer">GitHub</a></li>
       </ul>
     </nav>
